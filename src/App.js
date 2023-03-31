@@ -3,6 +3,7 @@ import Home from './Home';
 import Connect from './Connect';
 import Services from './Services';
 import Navbar from './Navbar';
+import About from './About';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Route path="/" element={<Home />}/>
       <Route path="/connect" element={<Connect />}/>
       <Route path="/services" element={<Services />}/>
+      <Route path="/about" element={<About />}/>
     </Routes>
     </>
   );

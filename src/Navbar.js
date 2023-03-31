@@ -1,5 +1,5 @@
 
-import { ReactComponent as Logo } from './logos/placeholder.svg'
+import { ReactComponent as Logo } from './logos/logo.svg'
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
@@ -13,8 +13,10 @@ const NavItemList = styled.ul`
 const NavBarContainer = styled.nav`
     display: flex;
     width: 100%;
-    height: 100px;
+    height: 130px;
     justify-content: center;
+    background-color: black;
+    border-bottom: 2px solid white;
 `
 
 const NavItem = styled(NavLink)`
@@ -24,11 +26,18 @@ const NavItem = styled(NavLink)`
     font-family: 'Montserrat';
     font-size: 22px;
     font-weight: 600;
-    color: black;
+    color: white;
 `
 
 const StyledLogo = styled(Logo)`
-    margin: 0px 30px 0px 20px; 
+    margin: 54px 17px -79px 11px;
+    width: 248px;
+    z-index: 1;
+    background-color: white;
+    height: 186px;
+    border: 15px solid black;
+    border-radius: 56px;
+    padding: 20px;
 `
 
 function Navbar() {
