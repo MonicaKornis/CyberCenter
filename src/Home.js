@@ -1,3 +1,4 @@
+import React from 'react';
 import mainSrc from './assets/main-2.jpg'
 import repairSrc from './assets/main.jpg'
 import gameingSrc from './assets/gameing.jpg'

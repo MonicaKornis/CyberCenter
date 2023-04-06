@@ -1,4 +1,5 @@
 
+import React from 'react';
 import { ReactComponent as Logo } from './logos/logo.svg'
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
