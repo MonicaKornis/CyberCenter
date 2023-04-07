@@ -12,7 +12,7 @@ import './App.css';
 import styled from 'styled-components';
 
 const BannerImage = styled.img`
-  width: 100%;
+  width: 50%;
   @media screen and (max-width: 600px) {
     width: 170%;
   }
@@ -21,9 +21,10 @@ const BannerImage = styled.img`
 const BannerText = styled.p`
   color: white;
   font-family: 'Raleway';
-  font-size: 56px;
+  font-size: 16px;
   font-weight: 600;
   text-shadow: rgb(0 0 0) 3px 7px 20px;
+  width: 30%;
   @media screen and (max-width: 600px) {
     font-size: 36px;
   }
@@ -31,19 +32,15 @@ const BannerText = styled.p`
 
 const BannerContainer = styled.div`
   position: relative;
+  margin-top: 50px;
   height: 500px;
   overflow: hidden;
   display: flex;
-  align-items: center;
+  justify-content: space-evenly;
 `;
 
 const BannerContent = styled.div`
-margin: auto;
-left: 0;
-right: 0;
-text-align: center;
-width: 79%;
-position: absolute;
+
 `;
 
 const BannerButton = styled.button`
@@ -109,7 +106,7 @@ const InnerBorder = styled.div`
   color: white;
   align-items: center;
   font-weight: 600;
-  width: 90%;
+  width: 50%;
   height: 80%;
   padding: 5px;
   border: 2px solid white;
@@ -117,7 +114,7 @@ const InnerBorder = styled.div`
 `;
 
 const GridImage = styled.img`
-  width: 100%;
+  width: 50%;
   height: 100%;
   position: absolute;
   z-index: -1;
@@ -133,35 +130,34 @@ function Home() {
   return (
     <div className="App">
      <BannerContainer>
+     <BannerImage src={mainSrc} alt="computer-repair-image" />
       <BannerContent>
         <BannerText>
         Computer Sales, Service, and Recycling in Excelsior Springs, Missouri
         </BannerText>
-        <BannerButton onClick={handleClick}>Learn More</BannerButton>
         </BannerContent>
-        <BannerImage src={mainSrc} alt="computer-repair-image" />
       </BannerContainer>
       <ServicesGrid>
         <Row>
           <Column>
-            <RedOverlay><InnerBorder>Virus and Bug Removal</InnerBorder><GridImage src={repairSrc}/></RedOverlay>
+         
           </Column>
           <Column>
-          <BlueOverlay><InnerBorder>Custom Built Computers</InnerBorder><GridImage src={keyboardSrc}/></BlueOverlay>
+         
           </Column>
           <Column>
-          <RedOverlay><InnerBorder>PC and Laptop Sales</InnerBorder><GridImage src={computerSrc}/></RedOverlay>
+          {/* <RedOverlay><InnerBorder>PC and Laptop Sales</InnerBorder><GridImage src={computerSrc}/></RedOverlay> */}
           </Column>
         </Row>
         <Row>
           <Column>
-          <BlueOverlay><InnerBorder>Data Recovery</InnerBorder><GridImage src={codeSrc}/></BlueOverlay>
+          {/* <BlueOverlay><InnerBorder>Data Recovery</InnerBorder><GridImage src={codeSrc}/></BlueOverlay> */}
           </Column>
           <Column>
-          <RedOverlay><InnerBorder>Custom Gaming Systems</InnerBorder><GridImage src={gameingSrc}/></RedOverlay>
+          {/* <RedOverlay><InnerBorder>Custom Gaming Systems</InnerBorder><GridImage src={gameingSrc}/></RedOverlay> */}
           </Column>
           <Column>
-          <BlueOverlay><InnerBorder>Home Networking</InnerBorder><GridImage src={networkingSrc}/></BlueOverlay>
+          {/* <BlueOverlay><InnerBorder>Home Networking</InnerBorder><GridImage src={networkingSrc}/></BlueOverlay> */}
           </Column>
         </Row>
       </ServicesGrid>

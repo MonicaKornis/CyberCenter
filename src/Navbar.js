@@ -7,49 +7,42 @@ import { NavLink } from 'react-router-dom';
 const NavItemList = styled.ul`
     display: flex;
     align-items: center;
-    width: 75%;
+    width: 97%;
     justify-content: space-between;
 `
 
 const NavBarContainer = styled.nav`
     display: flex;
     width: 100%;
-    height: 130px;
+    height: 85px;
     justify-content: center;
-    background-color: black;
-    border-bottom: 2px solid white;
+    background-color: white;
+    border-bottom: 1px solid #00000046;
 `
 
 const NavItem = styled(NavLink)`
     list-style: none;
-    margin-right: 15px;
+    margin-right: 35px;
     text-decoration: none;
-    font-family: 'Montserrat';
-    font-size: 22px;
+    font-family: 'Orbitron';
+    font-size: 20px;
     font-weight: 600;
-    color: white;
+    color: black;
 `
 
 const StyledLogo = styled(Logo)`
-    margin: 54px 17px -79px 11px;
-    width: 248px;
-    z-index: 1;
-    background-color: white;
-    height: 186px;
-    border: 15px solid black;
-    border-radius: 56px;
-    padding: 20px;
+
 `
 
 function Navbar() {
   return (
     <NavBarContainer>
       <NavItemList>
-        <NavItem to='/'>Home</NavItem>
+        <StyledLogo/>
+        <div>
         <NavItem to='/services'>Services</NavItem>
-        <StyledLogo />
         <NavItem to='/connect'>Connect</NavItem>
-        <NavItem to='/about'>About</NavItem>
+        </div>
       </NavItemList>
     </NavBarContainer>
   );
