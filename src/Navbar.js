@@ -38,7 +38,9 @@ function Navbar() {
   return (
     <NavBarContainer>
       <NavItemList>
+        <NavItem to='/'>
         <StyledLogo/>
+        </NavItem>
         <div>
         <NavItem to='/services'>Services</NavItem>
         <NavItem to='/connect'>Connect</NavItem>

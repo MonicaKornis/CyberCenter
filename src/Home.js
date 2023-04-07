@@ -12,19 +12,22 @@ import './App.css';
 import styled from 'styled-components';
 
 const BannerImage = styled.img`
-  width: 50%;
+  width: 659px;
+  margin-left: -52px;
+  border-radius: 30px;
+  flex-basis: 45%;
   @media screen and (max-width: 600px) {
-    width: 170%;
+    // width: 170%;
   }
 `;
 
 const BannerText = styled.p`
-  color: white;
-  font-family: 'Raleway';
-  font-size: 16px;
+  color: black;
+  font-family: 'Inter';
+  font-size: 34px;
+  margin-top: 15px;
   font-weight: 600;
-  text-shadow: rgb(0 0 0) 3px 7px 20px;
-  width: 30%;
+  // width: 30%;
   @media screen and (max-width: 600px) {
     font-size: 36px;
   }
@@ -33,14 +36,17 @@ const BannerText = styled.p`
 const BannerContainer = styled.div`
   position: relative;
   margin-top: 50px;
-  height: 500px;
   overflow: hidden;
   display: flex;
-  justify-content: space-evenly;
+  // justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
 `;
 
 const BannerContent = styled.div`
-
+  flex-basis: 45%;
+  border: 1px solid pink;
+  margin-left: 50px;
 `;
 
 const BannerButton = styled.button`
@@ -90,6 +96,22 @@ const RedOverlay = styled.div`
   font-weight: 600;
 `;
 
+const ServicesList = styled.ul`
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+`;
+
+const ServicesListItem = styled.li`
+  font-size: 20px;
+  font-family: 'Inter';
+  margin-bottom: 16px;
+`;
+
+
+
 const BlueOverlay = styled.div`
   background: rgb(11 3 229 / 30%);
   height: 185px;
@@ -133,8 +155,15 @@ function Home() {
      <BannerImage src={mainSrc} alt="computer-repair-image" />
       <BannerContent>
         <BannerText>
-        Computer Sales, Service, and Recycling in Excelsior Springs, Missouri
+        We take care of your tech needs.
         </BannerText>
+        <ServicesList>
+          <ServicesListItem>PC and Laptop Sales and Service</ServicesListItem>
+          <ServicesListItem>Home and Business Networking</ServicesListItem>
+          <ServicesListItem>Data Recovery and Destruction</ServicesListItem>
+          <ServicesListItem>Web Advertising</ServicesListItem>
+          <ServicesListItem>Virus and Bug Removal</ServicesListItem>
+        </ServicesList>
         </BannerContent>
       </BannerContainer>
       <ServicesGrid>
