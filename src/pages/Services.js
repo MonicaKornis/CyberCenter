@@ -1,8 +1,7 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './../App.css';
 import  styled  from 'styled-components'
-import computerSrc from './assets/homecomputer.jpg'
+import computerSrc from './../assets/keyboard.jpg'
 
 
 const BannerImage = styled.img`
@@ -40,21 +39,19 @@ width: 79%;
 position: absolute;
 `;
 
-function Connect() {
+function Services() {
   return (
     <div className="App">
-       <BannerContainer>
-      <BannerContent>
+      <BannerContainer>
+            <BannerContent>
         </BannerContent>
         <BannerImage src={computerSrc} alt="computer-repair-image" />
       </BannerContainer>
         <p>
-          CONNECT
+          SERVICES
         </p>
-      
-
     </div>
   );
 }
 
-export default Connect;
+export default Services;

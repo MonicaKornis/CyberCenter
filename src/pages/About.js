@@ -1,9 +1,8 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import  styled  from 'styled-components'
-import computerSrc from './assets/homecomputer.jpg'
 
+import  styled  from 'styled-components'
+import computerSrc from './../assets/homecomputer.jpg'
+import Map from './../Map';
 
 const BannerImage = styled.img`
   width: 100%;
@@ -42,9 +41,10 @@ position: absolute;
 
 function About() {
   return (
-    <div className="App">
+    <div>
       <BannerContainer>
-        <BannerImage src={computerSrc} alt="computer-repair-image" />
+        {/* <BannerImage src={computerSrc} alt="computer-repair-image" /> */}
+        <Map/>
       </BannerContainer>
    
         <p>

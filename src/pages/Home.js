@@ -1,24 +1,21 @@
 import React from 'react';
-import mainSrc from './assets/main-2.jpg'
-import repairSrc from './assets/main.jpg'
-import gameingSrc from './assets/gameing.jpg'
-import keyboardSrc from './assets/keyboard.jpg'
-import codeSrc from './assets/code.jpg'
-import computerSrc from './assets/homecomputer.jpg'
-import networkingSrc from './assets/networking.jpg'
+import mainSrc from './../assets/main-2.jpg'
+import repairSrc from './../assets/main.jpg'
+import gameingSrc from './../assets/gameing.jpg'
+import keyboardSrc from './../assets/keyboard.jpg'
+import codeSrc from './../assets/code.jpg'
+import computerSrc from './../assets/homecomputer.jpg'
+import networkingSrc from './../assets/networking.jpg'
 
 import { useNavigate } from 'react-router-dom';
-import './App.css';
 import styled from 'styled-components';
 
 const BannerImage = styled.img`
-  width: 659px;
+  width: 52%;
+  min-width: 440px;
   margin-left: -52px;
   border-radius: 30px;
   flex-basis: 45%;
-  @media screen and (max-width: 600px) {
-    // width: 170%;
-  }
 `;
 
 const BannerText = styled.p`
@@ -27,7 +24,6 @@ const BannerText = styled.p`
   font-size: 34px;
   margin-top: 15px;
   font-weight: 600;
-  // width: 30%;
   @media screen and (max-width: 600px) {
     font-size: 36px;
   }
@@ -38,15 +34,21 @@ const BannerContainer = styled.div`
   margin-top: 50px;
   overflow: hidden;
   display: flex;
-  // justify-content: space-evenly;
   flex-direction: row;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
+  // @media screen and (max-width: 900px) {
+  //   align-items: center;
+  // }
 `;
 
 const BannerContent = styled.div`
   flex-basis: 45%;
-  border: 1px solid pink;
+  // border: 1px solid pink;
   margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  
 `;
 
 const BannerButton = styled.button`
@@ -90,27 +92,27 @@ const RedOverlay = styled.div`
   display: flex; 
   justify-content: center;
   font-family: 'Raleway';
-  font-size: 21px;
+  font-size: 25px;
   align-items: center;
   color: white;
   font-weight: 600;
 `;
 
 const ServicesList = styled.ul`
-  width: 340px;
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  margin-left: -22px;
+  min-width: 400px;
 `;
 
 const ServicesListItem = styled.li`
-  font-size: 20px;
+  font-size: 25px;
   font-family: 'Inter';
   margin-bottom: 16px;
 `;
-
-
 
 const BlueOverlay = styled.div`
   background: rgb(11 3 229 / 30%);
@@ -136,7 +138,7 @@ const InnerBorder = styled.div`
 `;
 
 const GridImage = styled.img`
-  width: 50%;
+  width: 48%;
   height: 100%;
   position: absolute;
   z-index: -1;

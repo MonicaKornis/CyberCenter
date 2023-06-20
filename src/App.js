@@ -1,10 +1,19 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Home from './Home';
-import Connect from './Connect';
-import Services from './Services';
+
+import Home from './pages/Home';
+import Connect from './pages/Connect';
+import Services from './pages/Services';
+import About from './pages/About';
+
 import Navbar from './Navbar';
-import About from './About';
+
+
+import Map, {NavigationControl} from 'react-map-gl';
+
+import maplibregl from 'maplibre-gl';
+import 'maplibre-gl/dist/maplibre-gl.css';
+import './App.css';
 
 function App() {
   return (
@@ -21,3 +30,4 @@ function App() {
 }
 
 export default App;
+
