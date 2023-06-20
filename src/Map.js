@@ -16,9 +16,9 @@ const MapContainer = styled.div`
 export default function Map() {
     const mapContainer = useRef(null);
     const map = useRef(null);
-    const [lng] = useState(-94.224);
+    const [lng] = useState(-94.225);
     const [lat] = useState(39.341);
-    const [zoom] = useState(17);
+    const [zoom] = useState(15);
     const [API_KEY] = useState('LVC6PaZM5wvdYtFEQ7WB');
 
     // 39.34160437974564, -94.22482362248584
