@@ -1,4 +1,7 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+
 import mainSrc from './../assets/main-2.jpg'
 import repairSrc from './../assets/main.jpg'
 import gameingSrc from './../assets/gameing.jpg'
@@ -15,7 +18,7 @@ const BannerImage = styled.img`
   min-width: 440px;
   margin-left: -52px;
   border-radius: 30px;
-  flex-basis: 45%;
+  flex-basis: 43%;
 `;
 
 const BannerText = styled.p`
@@ -35,14 +38,12 @@ const BannerContainer = styled.div`
   overflow: hidden;
   display: flex;
   flex-direction: row;
-  // flex-wrap: wrap;
-  // @media screen and (max-width: 900px) {
-  //   align-items: center;
-  // }
+  padding-bottom: 95px;
+  border-bottom: 1px solid #00000046;
 `;
 
 const BannerContent = styled.div`
-  flex-basis: 45%;
+  flex-basis: 54%;
   // border: 1px solid pink;
   margin-left: 50px;
   display: flex;
@@ -144,6 +145,33 @@ const GridImage = styled.img`
   z-index: -1;
 `;
 
+const RatingNumber = styled.span`
+font-size: 30px;
+margin-right: 10px;
+margin-top: -1px;
+
+`;
+
+const RatingStars =  styled.span`
+  margin-right: 10px;
+  margin-top: 1px;
+  margin-top: 7px;
+  min-width: 113px;
+`;
+
+
+const RatingMessage = styled.span`
+  font-size: 20px;
+  margin-right: 10px;
+  margin-top: 7px;
+`;
+
+const RatingContainer = styled.span`
+  margin-top: 38px;
+  margin-left: -10px;
+  display: flex;
+`;
+
 
 
 function Home() {
@@ -166,6 +194,21 @@ function Home() {
           <ServicesListItem>Web Advertising</ServicesListItem>
           <ServicesListItem>Virus and Bug Removal</ServicesListItem>
         </ServicesList>
+    
+
+      <RatingContainer>
+          <RatingNumber>4.8</RatingNumber>
+          <RatingStars>
+            <FontAwesomeIcon icon={faStar} size="lg"/>
+            <FontAwesomeIcon icon={faStar} size="lg"/>
+            <FontAwesomeIcon icon={faStar} size="lg"/>
+            <FontAwesomeIcon icon={faStar} size="lg"/>
+            <FontAwesomeIcon icon={faStar} size="lg"/>
+          </RatingStars>
+        <RatingMessage>
+          People love us on Google Reviews and Facebook!
+        </RatingMessage>
+      </RatingContainer>
         </BannerContent>
       </BannerContainer>
       <ServicesGrid>

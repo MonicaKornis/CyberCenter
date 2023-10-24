@@ -7,7 +7,7 @@ import { NavLink } from 'react-router-dom';
 const NavItemList = styled.ul`
     display: flex;
     align-items: center;
-    width: 97%;
+    width: 95%;
     justify-content: space-between;
 `
 
@@ -18,20 +18,33 @@ const NavBarContainer = styled.nav`
     justify-content: center;
     background-color: white;
     border-bottom: 1px solid #00000046;
+    overflow: contain;
 `
 
-const NavItem = styled(NavLink)`
+const NavItem = styled.div`
     list-style: none;
-    margin-right: 35px;
+    margin-right: 28px;
     text-decoration: none;
-    font-family: 'Orbitron';
-    font-size: 20px;
-    font-weight: 600;
+    font-family: 'Inter';
+    font-size: 16px;
+    font-weight: 500;
     color: black;
 `
 
-const StyledLogo = styled(Logo)`
+const AddressContiner = styled.div`
+  display: flex;
+  max-width: 900px;
+    @media screen and (max-width: 1050px) {
+      display: none
+    }
+`;
 
+const LinkPhone = styled.a`
+  color: #3F94D1;
+  text-decoration: none;
+`
+
+const StyledLogo = styled(Logo)`
 `
 
 function Navbar() {
@@ -41,10 +54,13 @@ function Navbar() {
         <NavItem to='/'>
         <StyledLogo/>
         </NavItem>
-        <div>
-        <NavItem to='/services'>Services</NavItem>
-        <NavItem to='/connect'>Connect</NavItem>
-        </div>
+        <AddressContiner>
+        {/* <NavItem to='/services'>Services</NavItem>
+        <NavItem to='/connect'>Connect</NavItem> */}
+        <NavItem>205 S. Thompson Excelsior Springs, MO 64024</NavItem>
+        <NavItem>Tuesday - Saturday: 12:00 PM - 6:00 PM</NavItem>
+        <NavItem><LinkPhone href="tel:+8162999488">(816) 299-9488</LinkPhone></NavItem>
+        </AddressContiner>
       </NavItemList>
     </NavBarContainer>
   );
