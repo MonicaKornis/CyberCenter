@@ -9,8 +9,11 @@ const MapComponent = styled.div`
 `;
 
 const MapContainer = styled.div`
-    width: 100%;
+    width: 50%;
     height: calc(100vh - 77px);
+    @media screen and (max-width: 950px) {
+        width: 100%;
+      }
 `;
 
 export default function Map() {
@@ -39,7 +42,6 @@ export default function Map() {
         .addTo(map.current);
     })
 
-    console.log(map)
     return (
         <MapContainer>
             <MapComponent ref={mapContainer}></MapComponent>

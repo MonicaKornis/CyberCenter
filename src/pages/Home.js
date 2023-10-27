@@ -9,6 +9,7 @@ import keyboardSrc from './../assets/keyboard.jpg'
 import codeSrc from './../assets/code.jpg'
 import computerSrc from './../assets/homecomputer.jpg'
 import networkingSrc from './../assets/networking.jpg'
+import Map from './../Map';
 
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
@@ -67,28 +68,34 @@ const BannerButton = styled.button`
 `;
 
 const ServicesGrid = styled.div`
-  height: 400px;
-  margin-top: 5px;
+  padding-top: 59px;
+  padding-bottom: 59px;
+  border-bottom: 1px solid #00000046;
 `
 ;
 const Row = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
 `;
 
 const Column = styled.div`
-  flex-basis: 33.33%;
-  @media screen and (max-width: 800px) {
+  flex-basis: 40.33%;
+  @media screen and (max-width: 950px) {
     flex-basis: 100%;
   }
   position: relative;
   overflow: hidden;
+  margin-bottom: 21px;
+      display: flex;
+    justify-content: center;
 `;
 
 
 const RedOverlay = styled.div`
-  background: rgb(255 0 0 / 30%);
+  // background: rgb(255 0 0 / 30%);
   height: 185px;
   display: flex; 
   justify-content: center;
@@ -116,8 +123,8 @@ const ServicesListItem = styled.li`
 `;
 
 const BlueOverlay = styled.div`
-  background: rgb(11 3 229 / 30%);
-  height: 185px;
+  // background: rgb(11 3 229 / 30%);
+  height: 135px;
   display: flex; 
   align-items: center;
   justify-content: center;
@@ -128,13 +135,14 @@ const InnerBorder = styled.div`
   justify-content: center;
   font-family: Raleway;
   font-size: 21px;
-  color: white;
+  height: 170px;
+  color: grey;
   align-items: center;
   font-weight: 600;
-  width: 50%;
-  height: 80%;
+  width: 81%;
+  height: 130px;
   padding: 5px;
-  border: 2px solid white;
+  border: 2px solid #E0E0E0;
   text-shadow: rgb(0 0 0) 3px 7px 20px;
 `;
 
@@ -171,6 +179,23 @@ const RatingContainer = styled.span`
   margin-left: -10px;
   display: flex;
 `;
+
+const GridContainer = styled.div`
+
+`;
+
+const MapContainer = styled.div`
+
+`;
+
+const MapSection = styled.div`
+
+`;
+
+const AddressContainer = styled.div``;
+
+
+
 
 
 
@@ -211,30 +236,45 @@ function Home() {
       </RatingContainer>
         </BannerContent>
       </BannerContainer>
+      <GridContainer>
       <ServicesGrid>
-        <Row>
+        {/* <Row>
           <Column>
          
           </Column>
           <Column>
          
           </Column>
-          <Column>
-          {/* <RedOverlay><InnerBorder>PC and Laptop Sales</InnerBorder><GridImage src={computerSrc}/></RedOverlay> */}
-          </Column>
-        </Row>
+        </Row> */}
         <Row>
           <Column>
-          {/* <BlueOverlay><InnerBorder>Data Recovery</InnerBorder><GridImage src={codeSrc}/></BlueOverlay> */}
+           <InnerBorder>Data Recovery</InnerBorder>
           </Column>
           <Column>
-          {/* <RedOverlay><InnerBorder>Custom Gaming Systems</InnerBorder><GridImage src={gameingSrc}/></RedOverlay> */}
+        <InnerBorder>Data Recovery</InnerBorder>  
           </Column>
           <Column>
-          {/* <BlueOverlay><InnerBorder>Home Networking</InnerBorder><GridImage src={networkingSrc}/></BlueOverlay> */}
+        <InnerBorder>Data Recovery</InnerBorder>  
+          </Column>
+          <Column>
+        <InnerBorder>Data Recovery</InnerBorder>  
+          </Column>
+          <Column>
+        <InnerBorder>Data Recovery</InnerBorder>  
+          </Column>
+          <Column>
+        <InnerBorder>Data Recovery</InnerBorder>  
           </Column>
         </Row>
       </ServicesGrid>
+      </GridContainer>
+      <MapSection>
+      <MapContainer>
+
+        <Map/>
+        <AddressContainer></AddressContainer>
+      </MapContainer>
+      </MapSection>
     </div>
   );
 }
