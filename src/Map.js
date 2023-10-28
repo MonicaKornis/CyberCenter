@@ -10,10 +10,11 @@ const MapComponent = styled.div`
 
 const MapContainer = styled.div`
     width: 50%;
-    height: calc(100vh - 77px);
+    height: calc(70vh - 77px);
+    border: 1px solid black;
     @media screen and (max-width: 950px) {
         width: 100%;
-      }
+    }
 `;
 
 export default function Map() {
@@ -24,8 +25,6 @@ export default function Map() {
     const [zoom] = useState(15);
     const [API_KEY] = useState('LVC6PaZM5wvdYtFEQ7WB');
 
-    // 39.34160437974564, -94.22482362248584
-
     useEffect(() => {
         
        if(!map.current && mapContainer.current) {
@@ -33,7 +32,8 @@ export default function Map() {
                 container: mapContainer.current,
                 style: `https://api.maptiler.com/maps/streets-v2/style.json?key=${API_KEY}`,
                 center: [lng, lat],
-                zoom: zoom
+                zoom: zoom,
+                scrollZoom: false,
             })
         }
         map.current.addControl(new maplibregl.NavigationControl(), 'top-right');

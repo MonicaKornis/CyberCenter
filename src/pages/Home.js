@@ -3,12 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 import mainSrc from './../assets/main-2.jpg'
-import repairSrc from './../assets/main.jpg'
-import gameingSrc from './../assets/gameing.jpg'
-import keyboardSrc from './../assets/keyboard.jpg'
-import codeSrc from './../assets/code.jpg'
-import computerSrc from './../assets/homecomputer.jpg'
-import networkingSrc from './../assets/networking.jpg'
 import Map from './../Map';
 
 import { useNavigate } from 'react-router-dom';
@@ -130,7 +124,7 @@ const BlueOverlay = styled.div`
   justify-content: center;
 `;
 
-const InnerBorder = styled.div`
+const ServiceCard = styled.div`
   display: flex;
   justify-content: center;
   font-family: Raleway;
@@ -185,14 +179,20 @@ const GridContainer = styled.div`
 `;
 
 const MapContainer = styled.div`
-
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-left: 6vw
 `;
 
 const MapSection = styled.div`
-
+margin-left: 6vw
 `;
 
 const AddressContainer = styled.div``;
+
+const ServiceImageContainer = styled.div``;
+
+const ServiceCaptionContainer = styled.div``;
 
 
 
@@ -248,22 +248,52 @@ function Home() {
         </Row> */}
         <Row>
           <Column>
-           <InnerBorder>Data Recovery</InnerBorder>
+           <ServiceCard>
+            <ServiceImageContainer>
+            </ServiceImageContainer>
+            <ServiceCaptionContainer>
+            </ServiceCaptionContainer>
+           </ServiceCard>
           </Column>
           <Column>
-        <InnerBorder>Data Recovery</InnerBorder>  
+        <ServiceCard>
+          <ServiceImageContainer>
+          </ServiceImageContainer>
+          <ServiceCaptionContainer>
+          </ServiceCaptionContainer>
+        </ServiceCard>  
           </Column>
           <Column>
-        <InnerBorder>Data Recovery</InnerBorder>  
+        <ServiceCard>
+          <ServiceImageContainer>
+          </ServiceImageContainer>
+          <ServiceCaptionContainer>
+          </ServiceCaptionContainer>
+        </ServiceCard>  
           </Column>
           <Column>
-        <InnerBorder>Data Recovery</InnerBorder>  
+        <ServiceCard>
+          <ServiceImageContainer>
+          </ServiceImageContainer>
+          <ServiceCaptionContainer>
+          </ServiceCaptionContainer>
+        </ServiceCard>  
           </Column>
           <Column>
-        <InnerBorder>Data Recovery</InnerBorder>  
+        <ServiceCard>
+          <ServiceImageContainer>
+          </ServiceImageContainer>
+          <ServiceCaptionContainer>
+          </ServiceCaptionContainer>
+        </ServiceCard>  
           </Column>
           <Column>
-        <InnerBorder>Data Recovery</InnerBorder>  
+        <ServiceCard>
+          <ServiceImageContainer>
+          </ServiceImageContainer>
+          <ServiceCaptionContainer>
+          </ServiceCaptionContainer>
+        </ServiceCard>  
           </Column>
         </Row>
       </ServicesGrid>

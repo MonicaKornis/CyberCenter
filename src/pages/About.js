@@ -1,7 +1,7 @@
 import React from 'react';
 
 import  styled  from 'styled-components'
-import computerSrc from './../assets/homecomputer.jpg'
+
 import Map from './../Map';
 
 const BannerImage = styled.img`
