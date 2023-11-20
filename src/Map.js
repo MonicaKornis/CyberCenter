@@ -9,7 +9,7 @@ const MapComponent = styled.div`
 `;
 
 const MapContainer = styled.div`
-    width: 50%;
+    width: 45%;
     height: calc(70vh - 77px);
     border: 1px solid black;
     @media screen and (max-width: 950px) {
@@ -40,7 +40,7 @@ export default function Map() {
         new maplibregl.Marker({color: "#FF0000"})
         .setLngLat([-94.2248, 39.341])
         .addTo(map.current);
-    })
+    }, [])
 
     return (
         <MapContainer>

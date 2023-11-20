@@ -3,6 +3,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 import mainSrc from './../assets/main-2.jpg'
+import computerSrc from  './../assets/laptop.png';
+import bugSrc from  './../assets/bug.png';
+import dataSrc from  './../assets/data.png';
+import windowsSrc from  './../assets/windows.png';
+import moneySrc from  './../assets/money.png';
+import recycleSrc from  './../assets/recycle.png';
 import Map from './../Map';
 
 import { useNavigate } from 'react-router-dom';
@@ -127,17 +133,16 @@ const BlueOverlay = styled.div`
 const ServiceCard = styled.div`
   display: flex;
   justify-content: center;
-  font-family: Raleway;
   font-size: 21px;
-  height: 170px;
-  color: grey;
+  height: 110px;
   align-items: center;
   font-weight: 600;
   width: 81%;
-  height: 130px;
+  height: 90px;
   padding: 5px;
-  border: 2px solid #E0E0E0;
-  text-shadow: rgb(0 0 0) 3px 7px 20px;
+  border: 2px solid #6c757d3d;
+  min-width: 358px;
+  max-width: 648px;
 `;
 
 const GridImage = styled.img`
@@ -181,18 +186,52 @@ const GridContainer = styled.div`
 const MapContainer = styled.div`
   padding-top: 100px;
   padding-bottom: 100px;
-  margin-left: 6vw
+  margin-left: 6vw;
+  display:  flex;
 `;
 
 const MapSection = styled.div`
-margin-left: 6vw
+
 `;
 
-const AddressContainer = styled.div``;
+const AddressContainer = styled.div`
+  width: 45%;
+  margin-left: 41px;
+`;
 
-const ServiceImageContainer = styled.div``;
+const ServiceImageContainer = styled.div`
+width: 83px;
+`;
 
-const ServiceCaptionContainer = styled.div``;
+const ServiceCaptionContainer = styled.div`
+width: 68%;
+`;
+
+const ServiceImageIcon =  styled.img`
+  width: 60px;
+  margin-right: -5px;
+`;
+
+const ServiceImageParagraph = styled.p`
+  font-weight: 400;
+  font-size: 15px;
+  margin-top: 5px;
+`;
+
+const ServiceImageHeader = styled.h4`
+  margin-top: 14px;
+  margin-bottom: 2px;
+  font-size: 19px;
+`;
+
+const AddressAndBusinessInformationContainer = styled.div`
+
+`;
+
+const AddressAndBusinessInformationSection = styled.div`
+
+`;
+
 
 
 
@@ -250,48 +289,66 @@ function Home() {
           <Column>
            <ServiceCard>
             <ServiceImageContainer>
+              <ServiceImageIcon src={computerSrc}/>
             </ServiceImageContainer>
             <ServiceCaptionContainer>
+              <ServiceImageHeader>Laptop Screen Repair</ServiceImageHeader>
+              <ServiceImageParagraph>We repair/replace laptop screens including touch screens.</ServiceImageParagraph>
             </ServiceCaptionContainer>
            </ServiceCard>
           </Column>
           <Column>
         <ServiceCard>
-          <ServiceImageContainer>
-          </ServiceImageContainer>
+         <ServiceImageContainer>
+              <ServiceImageIcon src={moneySrc}/>
+            </ServiceImageContainer>
           <ServiceCaptionContainer>
+          <ServiceImageHeader>Computer Sales</ServiceImageHeader>
+          <ServiceImageParagraph>We repair/replace laptop screens including touch screens.</ServiceImageParagraph>
           </ServiceCaptionContainer>
         </ServiceCard>  
           </Column>
           <Column>
         <ServiceCard>
-          <ServiceImageContainer>
-          </ServiceImageContainer>
+         <ServiceImageContainer>
+              <ServiceImageIcon src={recycleSrc}/>
+            </ServiceImageContainer>
           <ServiceCaptionContainer>
+          <ServiceImageHeader>Electronics Recycling</ServiceImageHeader>
+          <ServiceImageParagraph>We repair/replace laptop screens including touch screens.</ServiceImageParagraph>
           </ServiceCaptionContainer>
         </ServiceCard>  
           </Column>
           <Column>
         <ServiceCard>
-          <ServiceImageContainer>
-          </ServiceImageContainer>
+         <ServiceImageContainer>
+              <ServiceImageIcon src={windowsSrc}/>
+            </ServiceImageContainer>
           <ServiceCaptionContainer>
+          <ServiceImageHeader>Operating System Reloads</ServiceImageHeader>
+          <ServiceImageParagraph>We repair/replace laptop screens including touch screens.</ServiceImageParagraph>
           </ServiceCaptionContainer>
         </ServiceCard>  
           </Column>
           <Column>
         <ServiceCard>
-          <ServiceImageContainer>
-          </ServiceImageContainer>
+         <ServiceImageContainer>
+              <ServiceImageIcon src={dataSrc}/>
+            </ServiceImageContainer>
           <ServiceCaptionContainer>
+          <ServiceImageHeader>Data Recovery</ServiceImageHeader>
+          <ServiceImageParagraph>We repair/replace laptop screens including touch screens.</ServiceImageParagraph>
           </ServiceCaptionContainer>
         </ServiceCard>  
           </Column>
           <Column>
         <ServiceCard>
-          <ServiceImageContainer>
-          </ServiceImageContainer>
+         <ServiceImageContainer>
+              <ServiceImageIcon src={bugSrc}/>
+            </ServiceImageContainer>
           <ServiceCaptionContainer>
+          <ServiceImageHeader>Virus & Bug Removal</ServiceImageHeader>
+          <ServiceImageParagraph>We repair/replace laptop screens including touch screens.</ServiceImageParagraph>
           </ServiceCaptionContainer>
         </ServiceCard>  
           </Column>
@@ -302,7 +359,27 @@ function Home() {
       <MapContainer>
 
         <Map/>
-        <AddressContainer></AddressContainer>
+        <AddressContainer>
+          <BannerText>Cyber Center Computer Solutions</BannerText>
+          <ServiceImageParagraph>We specialize in PC/Laptop repair and recycling. We also offer refurbished laptops and desktops starting at just $80.00! Virus and Malware removal starts at $75!</ServiceImageParagraph>
+          <AddressAndBusinessInformationContainer>
+              <AddressAndBusinessInformationSection>
+               <ServiceImageHeader>Address</ServiceImageHeader>
+                <ServiceCaptionContainer>205 S. Thompson Excelsior Springs, MO 64024</ServiceCaptionContainer>
+              </AddressAndBusinessInformationSection>
+                <ServiceImageHeader>Phone</ServiceImageHeader>
+                <ServiceCaptionContainer>(816) 299-9488</ServiceCaptionContainer>
+              <AddressAndBusinessInformationSection>
+                <ServiceImageHeader>Social</ServiceImageHeader>
+                <ServiceCaptionContainer>Facebook: <a href=''>cybercenterkc</a></ServiceCaptionContainer>
+              </AddressAndBusinessInformationSection>
+              <AddressAndBusinessInformationSection>
+                <ServiceImageHeader>Hours</ServiceImageHeader>
+                <ServiceCaptionContainer>Tuesday - Saturday:</ServiceCaptionContainer>
+                <ServiceCaptionContainer>12:00 PM - 6:00 PM</ServiceCaptionContainer>
+              </AddressAndBusinessInformationSection>
+          </AddressAndBusinessInformationContainer>
+        </AddressContainer>
       </MapContainer>
       </MapSection>
     </div>
