@@ -16,10 +16,15 @@ import styled from 'styled-components';
 
 const BannerImage = styled.img`
   width: 52%;
-  min-width: 440px;
-  margin-left: -52px;
-  border-radius: 30px;
+  flex-basis: 100%;
+
+  @media screen and (min-width: 800px) {
+    width: 52%;
+   min-width: 440px;
+   margin-left: -52px;
+   border-radius: 30px;
   flex-basis: 43%;
+  }
 `;
 
 const BannerText = styled.p`
@@ -35,12 +40,14 @@ const BannerText = styled.p`
 
 const BannerContainer = styled.div`
   position: relative;
-  margin-top: 50px;
   overflow: hidden;
   display: flex;
   flex-direction: row;
-  padding-bottom: 95px;
   border-bottom: 1px solid #00000046;
+  @media screen and (min-width: 800px) {
+    margin-top: 50px;
+     padding-bottom: 95px;
+  }
 `;
 
 const BannerContent = styled.div`
@@ -50,7 +57,9 @@ const BannerContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  
+  @media screen and (max-width: 800px) {
+    display: none
+  }
 `;
 
 const BannerButton = styled.button`
