@@ -15,16 +15,41 @@ import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 const BannerImage = styled.img`
+  width: 140%;
+`;
+
+const BannerImageContainer = styled.div`
   width: 52%;
   flex-basis: 100%;
+  overflow: hidden;
+  min-width: 440px;
+  height: 530px;
 
-  @media screen and (min-width: 800px) {
-    width: 52%;
-   min-width: 440px;
+  @media screen and (min-width: 900px) {
+   width: 47%;
+
    margin-left: -52px;
-   border-radius: 30px;
-  flex-basis: 43%;
+   border-radius: 20px;
+   flex-basis: 49%;
+   height: 407px;
   }
+
+
+  @media screen and (min-width: 1000px) {
+    width: 45%;
+    margin-left: -52px;
+    border-radius: 20px;
+    flex-basis: 42%;
+    height: 413px;
+   }
+
+   @media screen and (min-width: 1200px) {
+    width: 45%;
+    margin-left: -52px;
+    border-radius: 20px;
+    flex-basis: 42%;
+    height: 481px;
+   }
 `;
 
 const BannerText = styled.p`
@@ -33,8 +58,9 @@ const BannerText = styled.p`
   font-size: 34px;
   margin-top: 15px;
   font-weight: 600;
-  @media screen and (max-width: 600px) {
-    font-size: 36px;
+
+  @media screen and (max-width: 1000px) {
+    font-size: 29px;
   }
 `;
 
@@ -44,7 +70,7 @@ const BannerContainer = styled.div`
   display: flex;
   flex-direction: row;
   border-bottom: 1px solid #00000046;
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: 900px) {
     margin-top: 50px;
      padding-bottom: 95px;
   }
@@ -52,12 +78,11 @@ const BannerContainer = styled.div`
 
 const BannerContent = styled.div`
   flex-basis: 54%;
-  // border: 1px solid pink;
   margin-left: 50px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 900px) {
     display: none
   }
 `;
@@ -80,6 +105,7 @@ const ServicesGrid = styled.div`
   padding-top: 59px;
   padding-bottom: 59px;
   border-bottom: 1px solid #00000046;
+  displayL grid;
 `
 ;
 const Row = styled.div`
@@ -129,6 +155,10 @@ const ServicesListItem = styled.li`
   font-size: 25px;
   font-family: 'Inter';
   margin-bottom: 16px;
+
+  @media screen and (max-width: 1000px) {
+    font-size: 22px;
+  }
 `;
 
 const BlueOverlay = styled.div`
@@ -177,13 +207,16 @@ const RatingStars =  styled.span`
 
 
 const RatingMessage = styled.span`
-  font-size: 20px;
+  font-size: 22px;
   margin-right: 10px;
   margin-top: 7px;
+  @media screen and (max-width: 900px) {
+    font-size: 18px;
+  }
 `;
 
 const RatingContainer = styled.span`
-  margin-top: 38px;
+  margin-top: 18px;
   margin-left: -10px;
   display: flex;
 `;
@@ -195,8 +228,14 @@ const GridContainer = styled.div`
 const MapContainer = styled.div`
   padding-top: 100px;
   padding-bottom: 100px;
-  margin-left: 6vw;
+  margin-left: 7vw;
   display:  flex;
+
+  @media screen and (max-width: 950px) {
+    flex-direction: column;
+    width: 85%;
+    align-items: center;
+  }
 `;
 
 const MapSection = styled.div`
@@ -206,6 +245,12 @@ const MapSection = styled.div`
 const AddressContainer = styled.div`
   width: 45%;
   margin-left: 41px;
+
+  @media screen and (max-width: 950px) {
+  width: 100%;
+  margin-left: 1px;
+  margin-top: 37px;
+  }
 `;
 
 const ServiceImageContainer = styled.div`
@@ -234,17 +279,13 @@ const ServiceImageHeader = styled.h4`
 `;
 
 const AddressAndBusinessInformationContainer = styled.div`
-
+  display: grid;
+  grid-template-columns: 50% 50%;
 `;
 
 const AddressAndBusinessInformationSection = styled.div`
-
+  margin-bottom: 10px;
 `;
-
-
-
-
-
 
 
 function Home() {
@@ -255,7 +296,9 @@ function Home() {
   return (
     <div className="App">
      <BannerContainer>
-     <BannerImage src={mainSrc} alt="computer-repair-image" />
+      <BannerImageContainer>
+        <BannerImage src={mainSrc} alt="computer-repair-image" />
+     </BannerImageContainer>
       <BannerContent>
         <BannerText>
         We take care of your tech needs.
@@ -286,14 +329,6 @@ function Home() {
       </BannerContainer>
       <GridContainer>
       <ServicesGrid>
-        {/* <Row>
-          <Column>
-         
-          </Column>
-          <Column>
-         
-          </Column>
-        </Row> */}
         <Row>
           <Column>
            <ServiceCard>
@@ -376,8 +411,10 @@ function Home() {
                <ServiceImageHeader>Address</ServiceImageHeader>
                 <ServiceCaptionContainer>205 S. Thompson Excelsior Springs, MO 64024</ServiceCaptionContainer>
               </AddressAndBusinessInformationSection>
+              <AddressAndBusinessInformationSection>
                 <ServiceImageHeader>Phone</ServiceImageHeader>
                 <ServiceCaptionContainer>(816) 299-9488</ServiceCaptionContainer>
+              </AddressAndBusinessInformationSection>
               <AddressAndBusinessInformationSection>
                 <ServiceImageHeader>Social</ServiceImageHeader>
                 <ServiceCaptionContainer>Facebook: <a href=''>cybercenterkc</a></ServiceCaptionContainer>
