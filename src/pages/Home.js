@@ -23,11 +23,11 @@ const BannerImageContainer = styled.div`
   flex-basis: 100%;
   overflow: hidden;
   min-width: 440px;
-  height: 530px;
+  height: 405px;
 
   @media screen and (min-width: 900px) {
    width: 47%;
-
+   position: relative;
    margin-left: -52px;
    border-radius: 20px;
    flex-basis: 49%;
@@ -61,6 +61,20 @@ const BannerText = styled.p`
 
   @media screen and (max-width: 1000px) {
     font-size: 29px;
+  }
+`;
+
+const BannerTextMoble = styled.p`
+  display: none;
+  @media screen and (max-width: 700px) {
+    font-size: 27px;
+    color: white;
+    position: absolute;
+    bottom: 271px;
+    display: block;
+    font-weight: 700;
+    width: 312px;
+    left: 37px;
   }
 `;
 
@@ -105,7 +119,13 @@ const ServicesGrid = styled.div`
   padding-top: 59px;
   padding-bottom: 59px;
   border-bottom: 1px solid #00000046;
-  displayL grid;
+  display: grid;
+
+  @media screen and (max-width: 650px) {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  
 `
 ;
 const Row = styled.div`
@@ -121,11 +141,15 @@ const Column = styled.div`
   @media screen and (max-width: 950px) {
     flex-basis: 100%;
   }
+
+  @media screen and (max-width: 650px) {
+    margin-bottom: 0px;
+  }
   position: relative;
   overflow: hidden;
   margin-bottom: 21px;
-      display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 `;
 
 
@@ -162,7 +186,6 @@ const ServicesListItem = styled.li`
 `;
 
 const BlueOverlay = styled.div`
-  // background: rgb(11 3 229 / 30%);
   height: 135px;
   display: flex; 
   align-items: center;
@@ -182,6 +205,12 @@ const ServiceCard = styled.div`
   border: 2px solid #6c757d3d;
   min-width: 358px;
   max-width: 648px;
+
+  @media screen and (max-width: 650px) {
+    border-bottom: none;
+    width: 100%;
+  }
+
 `;
 
 const GridImage = styled.img`
@@ -280,7 +309,7 @@ const ServiceImageHeader = styled.h4`
 
 const AddressAndBusinessInformationContainer = styled.div`
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 59% 57%;
 `;
 
 const AddressAndBusinessInformationSection = styled.div`
@@ -298,6 +327,9 @@ function Home() {
      <BannerContainer>
       <BannerImageContainer>
         <BannerImage src={mainSrc} alt="computer-repair-image" />
+        <BannerTextMoble>
+        We take care of your tech needs.
+        </BannerTextMoble>
      </BannerImageContainer>
       <BannerContent>
         <BannerText>
