@@ -64,7 +64,7 @@ const BannerText = styled.p`
   }
 `;
 
-const BannerTextMoble = styled.p`
+const BannerTextMobile = styled.p`
   display: none;
   @media screen and (max-width: 700px) {
     font-size: 27px;
@@ -327,9 +327,9 @@ function Home() {
      <BannerContainer>
       <BannerImageContainer>
         <BannerImage src={mainSrc} alt="computer-repair-image" />
-        <BannerTextMoble>
+        <BannerTextMobile>
         We take care of your tech needs.
-        </BannerTextMoble>
+        </BannerTextMobile>
      </BannerImageContainer>
       <BannerContent>
         <BannerText>
