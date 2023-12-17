@@ -1,9 +1,15 @@
 .App {
-  
+  width: 100vw;
+  overflow: hidden;
 }
 
 .map-wrap {
   position: relative;
   width: 100%;
   height: calc(100vh - 77px);
+  @media screen and (max-width: 950px) {
+    width: 100%;
+    height: calc(64vh - 77px);
+  }
+
 }

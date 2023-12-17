@@ -206,9 +206,12 @@ const ServiceCard = styled.div`
   min-width: 358px;
   max-width: 648px;
 
+
   @media screen and (max-width: 650px) {
     border-bottom: none;
     width: 100%;
+    border-left: none;
+    border-right: none;
   }
 
 `;

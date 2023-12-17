@@ -14,6 +14,7 @@ const MapContainer = styled.div`
     border: 1px solid black;
     @media screen and (max-width: 950px) {
         width: 100%;
+        height: calc(64vh - 77px);
     }
 `;
 
