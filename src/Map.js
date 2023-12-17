@@ -39,7 +39,7 @@ export default function Map() {
         }
         map.current.addControl(new maplibregl.NavigationControl(), 'top-right');
         new maplibregl.Marker({color: "#FF0000"})
-        .setLngLat([-94.2248, 39.341])
+        .setLngLat([-94.2248, 39.34157])
         .addTo(map.current);
     }, [])
 

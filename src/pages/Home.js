@@ -452,7 +452,7 @@ function Home() {
               </AddressAndBusinessInformationSection>
               <AddressAndBusinessInformationSection>
                 <ServiceImageHeader>Social</ServiceImageHeader>
-                <ServiceCaptionContainer>Facebook: <a href=''>cybercenterkc</a></ServiceCaptionContainer>
+                <ServiceCaptionContainer>Facebook: <a href='https://www.facebook.com/cybercenterkc'>cybercenterkc</a></ServiceCaptionContainer>
               </AddressAndBusinessInformationSection>
               <AddressAndBusinessInformationSection>
                 <ServiceImageHeader>Hours</ServiceImageHeader>
