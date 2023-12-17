@@ -342,7 +342,7 @@ function Home() {
           <ServicesListItem>PC and Laptop Sales and Service</ServicesListItem>
           <ServicesListItem>Home and Business Networking</ServicesListItem>
           <ServicesListItem>Data Recovery and Destruction</ServicesListItem>
-          <ServicesListItem>Web Advertising</ServicesListItem>
+          <ServicesListItem>Custom Built Gaming Computers</ServicesListItem>
           <ServicesListItem>Virus and Bug Removal</ServicesListItem>
         </ServicesList>
     
